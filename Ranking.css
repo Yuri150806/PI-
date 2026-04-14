@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #dcdcdc;
+    height: 100vh;
+    overflow: hidden; /* Evita barras de rolagem desnecessárias */
+}
+
+/* Cabeçalho */
+.topo {
+    background-color: rgb(180, 50, 50);
+    height: 50px;
+    display: flex;
+    justify-content: flex-end; /* Joga o menu hambúrguer para a direita */
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+}
+
+/* Logo da Etec - O quadrado que pula para fora */
+.logo {
+    height: 100px; 
+    width: 100px;
+    background-color: white;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    border: 1px solid #ccc;
+    z-index: 10;
+    object-fit: contain; /* Garante que a logo não estique */
+}
+
+.menu-hamburguer .bar {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+/* Container Principal */
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 30px;
+    padding: 50px 20px 40px 20px;
+    min-height: calc(100vh - 100px); /* Garante que o conteúdo apareça */
+    width: 100%;
+    background-color: #dcdcdc; /* Cor de fundo cinza */
+}
+
+/* Card do Ranking ajustado para não encostar */
+.card-ranking { 
+    width: 260px; 
+    height: 480px; /* Diminuído para não bater no vermelho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    background-color: rgb(180, 50, 50);
+    border-radius: 20px;
+}
+/* Estilo geral dos cards */
+/* Estilo geral dos cards */
+/* Estilo geral dos cards vermelhos */
+.card-item, .card-ranking, .card-perfil {
+    background-color: rgb(180, 50, 50); /* Vermelho Etec */
+    border-radius: 20px; /* Bordas suaves idênticas ao Figma */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    /* ABAIXO: Sombra muito mais leve e suave, igual ao design */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Card do Ranking - ESTICADO PARA BAIXO */
+/* Card do Ranking - Ajustado para não encostar na barra */
+.card-ranking { 
+    width: 260px; 
+    height: 510px; /* Diminuímos de 550px para 510px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+/* Ajuste para as imagens dos bequeres aparecerem certas */
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Cards da esquerda (Símbolos) */
+/* Cards da esquerda (Símbolos Químicos) */
+.container-itens { 
+    display: flex; 
+    flex-direction: row; /* Essencial: Coloca os cards um ao lado do outro */
+    gap: 15px; /* Espaçamento idêntico ao Figma */
+    align-items: flex-start; /* Alinha eles pelo topo */
+}
+
+.foto-item { 
+    background: white; 
+    border-radius: 10px; 
+    width: 90px; 
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* AJUSTE CRÍTICO: Faz o bequer caber no quadrado */
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Card Central (Ranking) - Aumentado para o Design */
+.card-ranking { 
+    width: 260px; 
+    height: 500px; /* Altura fixa maior para descer mais */
+    padding-top: 20px;
+}
+
+.coroa { font-size: 3rem; margin-bottom: 5px; display: block; }
+
+.lista-ranking { 
+    list-style: none; 
+    text-align: left; 
+    margin-top: 15px;
+    color: black; /* Texto preto como no Figma */
+}
+
+.lista-ranking li { 
+    margin-bottom: 8px; 
+    font-size: 1rem; 
+    font-weight: bold; 
+}
+
+/* Card da Direita (Perfil) */
+.card-perfil { width: 300px; height: 400px; }
+
+.foto-usuario {
+    width: 220px; 
+    height: 140px;
+    background-color: white;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.foto-usuario img { 
+    width: 90%; 
+    height: 90%; 
+    object-fit: contain;
+    filter: grayscale(1); 
+}
+
+.info-usuario p { 
+    font-size: 0.9rem; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    color: black; 
+}
+
+/* Rodapé */
+.rodape {
+    background-color: rgb(180, 50, 50);
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
