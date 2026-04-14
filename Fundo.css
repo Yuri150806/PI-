@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #333;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ajuste o nome abaixo para o nome real do seu arquivo de fundo na pasta Image */
+    background-image: url("Image/Fundo.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+    z-index: 10;
+}
+
+.logo-container img {
+    height: 120px; /* Aumentei um pouco para aparecer bem a Etec Júlio de Mesquita */
+}
+
+.main-card {
+    display: flex;
+    width: 750px;
+    height: 450px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background-color: #dcdcdc; /* Cor cinza do fundo da direita */
+    z-index: 5;
+}
+
+.side-left {
+    background-color: #ff0000;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.side-left h2 { font-size: 1.1rem; margin-bottom: 40px; }
+.side-left p { font-size: 0.8rem; margin-bottom: 20px; }
+
+.btn-outline {
+    background: white;
+    border: none;
+    color: #333;
+    padding: 10px 35px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.side-right {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.side-right h2 { margin-bottom: 30px; color: #333; font-size: 1rem; }
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+input {
+    width: 85%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    outline: none;
+}
+
+input::placeholder { color: rgba(255, 255, 255, 0.7); text-transform: uppercase; font-size: 0.7rem; }
+
+.btn-submit {
+    margin-top: 15px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
